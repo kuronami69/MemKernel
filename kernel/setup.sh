@@ -64,7 +64,7 @@ setup_memkernel() {
     fi
     
     echo "[+] Setting up MemKernel..."
-    [ -d "$GKI_ROOT/MemKernel" ] || git clone https://github.com/Poko-Apps/MemKernel && echo "[+] Repository cloned."
+    [ -d "$GKI_ROOT/MemKernel" ] || git clone https://github.com/kuronami69/MemKernel && echo "[+] Repository cloned."
     cd "$GKI_ROOT/MemKernel"
     git stash && echo "[-] Stashed current changes."
     git checkout main && git pull && echo "[+] Repository updated."
