@@ -41,8 +41,8 @@ randomize_driver_and_module() {
     local random_name
     if [ -n "${1:-}" ]; then
         random_name="$1"
-    else
-        random_name=$(tr -dc 'a-z' </dev/urandom | head -n 1 | head -c 6)
+    elserandom_name=$(head -c 6 /dev/urandom | tr -dc 'a-z')
+
     fi
 
     sed -i "s/#define DEVICE_NAME \".*\"/#define DEVICE_NAME \"$random_name\"/" "$GKI_ROOT/MemKernel/kernel/entry.c"
