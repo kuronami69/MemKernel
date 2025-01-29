@@ -41,7 +41,7 @@ randomize_driver_and_module() {
     local random_name
     if [ -n "${1:-}" ]; then
         random_name="$1"
-    elserandom_name=$(head -c 6 /dev/urandom | tr -dc 'a-z')
+    else random_name=$(head -c 6 /dev/urandom | tr -dc 'a-z')
 
     fi
 
